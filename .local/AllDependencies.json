@@ -5014,15 +5014,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luis Henrique\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrador\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "ElemeResidencial",
       "projectName": "ElemeResidencial",
-      "projectPath": "C:\\Users\\Luis Henrique\\Documents\\UiPath\\ElemeResidencial\\.local",
-      "packagesPath": "C:\\Users\\Luis Henrique\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luis Henrique\\Documents\\UiPath\\ElemeResidencial\\.local"
+      "projectPath": "Z:\\Documents\\GIT\\RPA\\.local",
+      "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
+      "outputPath": "Z:\\Documents\\GIT\\RPA\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5048,7 +5048,7 @@
             "version": "[21.4.4, 21.4.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Luis Henrique\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     }
   }
