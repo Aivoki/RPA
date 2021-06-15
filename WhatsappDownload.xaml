@@ -1,0 +1,235 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WhatsappDownload" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,2959" sap2010:WorkflowViewState.IdRef="WhatsappDownload_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX DisplayName="WhatsappDownload" sap:VirtualizedContainerService.HintSize="581,2794" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+      <Variable x:TypeArguments="x:String" Name="LeituraPDF" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Automação Whatsapp" sap:VirtualizedContainerService.HintSize="539,2702" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="https://web.whatsapp.com/" Name="UrlWhatsapp" />
+        <Variable x:TypeArguments="x:String" Default="Residencial Éleme 1" Name="NomeResidencial" />
+        <Variable x:TypeArguments="x:String" Default="[String.Format(&quot;{0}&quot;, System.IO.Directory.GetCurrentDirectory()) + &quot;\arquivos\&quot; + NomeResidencial + &quot;\&quot; + DateTime.Today.ToString(&quot;dd-MM-yyyy&quot;)]" Name="PathPDFS" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="497,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[PathPDFS + &quot;\Downloads&quot;]" />
+      <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="497,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[PathPDFS + &quot;\Aprovados&quot;]" />
+      <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="497,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[PathPDFS + &quot;\Recusados&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: Nova aba" sap:VirtualizedContainerService.HintSize="497,2253" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="463,2037" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Digitando informação na caixa de pesquisa" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="421,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[string.Format(&quot;{0}{1}&quot;, NomeResidencial, &quot;[k(enter)]&quot;.ToString)]">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://web.whatsapp.com/" DesignTimeRectangle="347, 186, 296, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;div&amp;gt;div' idx='2' isleaf='1' parentid='side' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;div&amp;gt;div' type='' isleaf='1' parentid='side' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASwAAAAYCAYAAABA4cB6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPKSURBVHhe7ZiLTR0xFETTfweUQAu0QAu0QA1ER2KkYfBn9xHIWzRHsvD62nPH17sO5M9bKaVchF5YpZTL0AurlHIZemGVUi5DL6xSymXohVVKuQwfLqynp6e3h4eHD+319fU9+rO8vLz81/yllPvj04X1/Pz8/tRLo5RyXywvLHh8fPw0Vkop/4NDFxa/aYH/qagxYI3HHB9nHnoi56KJB+HxWQ79Fqjmvw3Ke65JmKc57g9yXXoc4Xq+fpWHZ/eqHHqmJR5jrTPy8NVa5XjW4uweVn4StIn7/MT3TF/gI99rfxfP+ADPQxOz/MDzzP/OH/g6/ArmuH+45Vu5CssLSxsHCuMxbViHILKYvobnPASHtf4BKL7K4fqMu37mG0Hcc6J3xmMy0oNdHvqZl6aXivm+nrm+d587yuU/4ZZa7WqRGrs9rPwkxDw/Opk7taWHdnonxjic9THawyo/0J/53/mj7x69psQ8z63fylXY/qc7jDbHXAqgAqmAIgsHjLlOxsnjh674LMcI1ySXH1gy8gisU66dR4fYSO9IHu8DtfUXjJhqtzqPmYcRPg+9Va1gV4szexix8p3arkX/SH21v1t9zGp7NL/6kB5m/hjzeaCzBl8H8uK5Zsz2ec9s/yQEHVQ2zVWRaCreqNB5SMx3WOMfgMdHOcDH1QS5Vgc38gi+zvUgPTozvSN5vA+rjx293DON+bNcgEauEZl/hM+HrMWZPcDKT5LarnWkvviQ13zPj/qY5TmS3/vg/mHmD+30RlM8dcH3w3rh42pX4/CFNTqQESrSaE2OZcGI69BgVlDPkXP8eXSYzmg9+LqMp0eH2KhOR/KkV87Bz4KYtGd54IyHM7WCXS3O7mHlJ0ntnRb4Gn5qjs8944O5yukcyb/yDyt/o5widRO00Dizz3vm0IUFbG4UUzEEBdRzriHmxaef8dGFNctBcz20/BCIrQ4TMica+RGuPCa5Z/WP5HGvxF0nX/DZecDIw7+qlevyfOsedn6S1M560F/VF3hWE2d9jGoLu/w7/zDyB5nTSV19F4K4xjzfbp/3yuELC9igN6BYPubFzlgWLeN5yIzBKgd6Gs9DyMOcofU09wc7jyN8vuvNxiG9ksfPgliucT2a4+Nax0+N3VKrXS3O7mHlJ0nt1AJp0TIGvH/EXAfO+ADNpXme2TjwvPM/8weuTRMjXZ939Fu5Ch8urO9mdEjl+9ALWspvoRfWLyf/BS7lyvTC+qXoz4vWu/wmfvTCKqWUr9ALq5RyGXphlVIuQy+sUspl6IVVSrkIb29/AY+bSDxjl5nGAAAAAElFTkSuQmCC" InformativeScreenshot="d695501b712e056b60d200aa9f4ba800.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='WhatsApp' /&gt;" SearchSteps="FuzzySelector, Image" WaitForReadyArgument="Complete">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="282, 178, 393, 35" FriendlyName="'LABEL'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="421,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://web.whatsapp.com/" DesignTimeRectangle="1618, 130, 24, 24" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='main' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='main' tag='SPAN' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABuSURBVEhL7dKxCQAxCIXh279LY2WVcdI7hjN4JLV4BEPuFRYfWAg/kTyqajdV8Dj8oIgYMy9z9nYi20EistbaMmdvJ5IKzld6OxH8k2bhB8cY//3S3ru7E8EPXj9pFn6wfukX/JNmVfC4Ch6m9gIIemc0U3RElwAAAABJRU5ErkJggg==" InformativeScreenshot="cc0fd89270621b61602553aaae8d8cc2.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='WhatsApp' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1578, 130, 24, 24" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='main' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' parentid='main' tag='SPAN' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEvSURBVEhL7ZStDoMwFEb3/g6DQqFQGBQKj8KgUCgUz9DlkNylYV9LkzVkAnFCstvd0/sDr33f3Z08wuz8n3CeZ9d1nSvL0hVFcTzbtnXTNMnzV0SFfd8fkhBN07ht2+R/QwSFvozEVLSu61HxMAyfiuu6lv8PIYXLsnxk4zh+xe2MSbmAOqOQQmZmlam4QbWcq6pKxhVSSAISpSyGnaViFT8jhSQAZqbiPnSBs1Sr4meiwpQkWYS8ZyS5WgY6YJdTcYUUspkkYQtjbbWLsWQqrpBC4P0y6bldXMJkV5c6ExTyBTEpsI3My2ZmIOS3n7bUQMocfYFhErsA4hRpVOhDW5ktT7+F/hcnpb3Jwhi+lDHEPuhZhJAqzSYEXxp6VbIKASmLdEuFKTzC7Nws3N0biqIsYL3IqN8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Dados do grupo'" sap:VirtualizedContainerService.HintSize="421,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://web.whatsapp.com/" DesignTimeRectangle="1421, 176, 229, 40" ElementType="Text" FriendlyName="'Dados do grupo'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='DIV' type='' aaname='Dados do grupo' check:text='Dados do grupo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOkAAAAsCAYAAACAEp/kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANFSURBVHhe7dwNUhpBEIZhzudVvAkXiakk4g8YDKBiUiSew4Ns8ilNtZ1Z2YJlt9X3qaLizs72DFZ/Lhp0cDs9r2bjUQUgl+Xssnq4n1eD1e20ur2+WA8DyEK5fFjOqsGf5Y/qZkpIgWyUS+XzKaSL7+frYQBZbEL6++66WlydrYcBZHHz7+b5FFJ9T0pIgXwUUt1ECSmQFCEFkiOkQHKEFEiOkALJKaTKJyEFkpqMPleLyRkhBbKaXn6pfi2uCCmQFd+TAskRUiA5Qgok10tIT05OqqOjo/8eGm+D6gyHw/XR4XW9Hj6WFyGdXnxdDx9WXVNbWPdFSPGevAjpZNTOnWyb15r6+Ph474YnpHhP5uPT55D+XExShHS1Wr24mz4+Pm7usHooxJFq+fOl+hrzdeJ5W9ceWrdOG+uVbKurMb9P0b9+r/b5Mrpedfx+Sp/DXfaLbmxCupyNU4TUmswaT3N9E6rB/LX62DedNbGfYw3o+TpxTdXwa3ptrFfSpK7O6+H35vct9lyMrtex9mTiXnbZL7qTLqQSG89T8/pmLs1VbV+/NMc3c2zs17SxXkmTunrePmwSr4vrxBpic+y60tqxDvqT7uVubCCxr/T2sJDWNZKvb3ekEo3bOqqpY82v0+Z6XpO6oj3G/cWasZauV53Irttlv+iW3rt7d33x/IOj8bdP6+HDis3nqWnindIf+/N1DbZraKzB6+a3vZ5pUlcI6cek9+7qlW6K/4IRNYY1Ymw40bUWUjsfG0m1rX7dnFJto/qlxj7Uek3qSpOQxtDFGuLn1K1t4+hfb29miI1jTeHHYwPZsYVUNN8fWwP6Ovo4NpwPoq7xzV8Kg2ljvRKd31a3tC+N+Tm6xq9te/HX6djvZZf9ojup3nFU4udak/pmFh3bHDWcrvGNK3FN34AW/tK5kn3Xq7Otrj3/yK9jz8VYnVg72mW/6IZCej+fdBtSNGMB20cbNdAvfuk7KXu5uy9C+vbpB0fKJyHtmcLkX262EVAhpG9fL9+TAmiOkALJEVIgOUIKJEdIgeQIKZAcIQWSI6RAcoQUSI6QAskRUiC5TUj151Pmk9P1MIAsFFLdRAfz8aizP58CoLnnX1U7q/4CS8eLBJlVoycAAAAASUVORK5CYII=" InformativeScreenshot="686326c14dba02172622cd04f9df70d3.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='WhatsApp' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1421, 216, 229, 40" ElementType="Text" FriendlyName="'Selecionar mensagens'" FullSelectorArgument="&lt;webctrl aaname='Selecionar mensagens' aria-role='button' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Selecionar mensagens' aria-role='button' tag='DIV' type='' check:text='Selecionar mensagens' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOkAAAAsCAYAAACAEp/kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQBSURBVHhe7Z0NUtswEIU5H1fhJhykTX/CT0ggUNLAtE0PwkHUeYyfZrOVZZMmzha/b8aNLa1Wa+8+rBCTnmzWy7S6vUpCiFh8v7tOv5/uk0QqRFCySH+sFulxcdE0CyGiAJHiJnryOL9M8+nHplkIEYXF5ae0Wlylk1/ru3R7/blpFkJEYXnzJf1c3eo9qRBR0S+OhAiORCpEcCRSIYIjkQoRHIlUiOBIpEIERyIVIjgSqRDBySLFE0eLy0nTLISIQhapnt0VIiZZpPgrGC13hYjH1nvS5exr03x4zs/P0+npad5w3BfYTib7WZozDiGisrXcnU0/NM2H5ezs7C9RvkV0+xSpENHJIn16mA+y3H15eXm9c+F1VyRSMSa2lrtDvSeFSDebTXNUBiLkUtiLuiTSmj3w/Zy/jy9/18dKAOPxShs7H38QcYOdhePZX4Jx2Tkwxvv21K5DV9w2JtvXdT4A8dp+xOGv2yFiGwNHESmThdcSaLeFwAQRL6wue85HkGDYgJIvawvg2xYcC4mFgj47P3z4AvTjsdUKDfZ2DsZl5/F+YWP7/XVAX1vcaLN9GGvn5j7w81o/gPMOEdsYOIpIAS88NiTQYhNCkDAkByCBdkyXPfq57+nji7ES+LZjfL8Hc7PggB9fAnHZIgf+PLzfUuz2OtTi7joHS595ffxDxfYeOZpICZKEBDChPC5tTChsmdAue/a3UfJVAu0sMltcgEVkixA+0cbNFrUfX8LGRfwc8EG/jL20ca6uuNFv7S1t50MfHti/Jaf/Ett7J4sUTxwN+RGMxSaECa3RV1igq/8QIsU+ixjA1h778SV2FWmNrrgB26wv7LedT9u8JZHW2DW2MZBFeuwnjnDhkaRScjy2gLvsu/r7+GI7qRWUtwXwb4vcjy/xVpHaGNroIwQCW8xPG4s9nzYfiJ8irc1DdoltLGCF+yrSoZ44wkVn8gguuC0E9PvCsGOwb5PUx972IwYWRB9fvihqBWX3bR+LGvjxJXxcwPoF8GH9lmJHG6nFjXbbR1trA3jsz8ceYxxs7NyHiG0sPM4vhn9PiovvNw+Tys0LyRdwzR74fhZdyReOra3vrxUUsONpa4u4T5GV4rJzAO8X1K5DLW7ul8Z1nQ/AMW0YO14th4htDOB7d5/uZ8f7xZF4n5R+yIjdmE8n6fnbXCIV+wN3RNzxxH7AnfSoH8GI/x+/jJVA94tEKkRwskix5n24mTbNQogoZJHic1J9fYoQ8YBIsdKVSIUIypZI9V8fChGPLNL1ciaRChGQLZFquStEPHQnFSI4upMKEZwsUnwRmUQqRDyySPEww1Bf6SmE6E8WKf7Re1Ih4rElUj27K0Q88Kdqm/Uy/QGkJJbsHL5IIgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Mídia, links e docs'" sap:VirtualizedContainerService.HintSize="421,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://web.whatsapp.com/" DesignTimeRectangle="1277, 611, 111, 19" ElementType="Text" FriendlyName="'Mídia, links e docs'" FullSelectorArgument="&lt;webctrl aaname='Mídia, links e docs' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Mídia, links e docs' tag='SPAN' type='' check:text='Mídia, links e docs' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAAXCAYAAAA4JnCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVGhD7ZQ9ToMxEERzHw7Eeeg4ARUHoKChpaajRqLhBEhcIehBhkxGa38JUURk/CQrtne9f5NktZ4MwxRzIKaYAzHFHIgp5kBMMQdiijkQO2JePj6sVzfXm1MN9qvnp83pG84Xd7eb05aXj/ef+/u316+33B2D6js0HnUcm/sYfBanohQzxRLcp52h8q7iFA1IzEP5l2KyWkkZJHYXszegKeaWPxGTXxpJ+XQQUEK6mDlczlr4eQPuq79JrX0H7TF8L7E8puNiKrf64LP1LnG/nFHivjkL4Cx72sDtLOjVWorJqhIzDIJpCOAB8XFb/srd1/2qfC08Rub2M7lZQvVLcAmrs+gJlP15nCR9cxbsvT58l+xLtZZiAsG092ETNBuCTATceYFpd3o2x/18Tx4fbOZWP7xJv7yr8BkI5uWzEIrpeD2VHdSD6kz0js+KppgUqW+GBgEtMatmvQHwAlWYr31wP99rECJzs8e/N3yW+kw04FxVvKVZVHbgDr+WHXq1NsUEFeuBe2JqL7Konm+eW7if7zUI4cMD2XlTCSCw55Age+mxNIvKDqpx31xZa1dMms4HLTGBvdsoyIuSbxarPKCBt8h8QoMQLTGBd6qTWrw//Pzs+Lsl0pe4WY/++QBfP+d79ku1dsWsBktQT+J2+WsRyxtwX+7lRzzZeONNJR4j4+0rpurUHXutXm5wX1aLjJuzALenDdK+VOuOmOcABWrok8M4OzEnv2eKORBTzIGYYg7EFHMY1utPf6QvKeBEZM8AAAAASUVORK5CYII=" InformativeScreenshot="7d154cd92dd559fa81d4c8c872e4e5d3.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='WhatsApp' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1618, 610, 10, 21" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' type='' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA4AAAAZCAYAAAABmx/yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADLSURBVDhP5ZPLCoMwEEX7/zsRHxj8AnHl/7hRBCEqbgRRuGV02maaWKzL9qzCXE4yed1wkb8U53nm0WeEWFUVoihCXddcOUaIRVHA8zwEQYCmabjqRojruiLP800OwxBt23JiY+2R5CzLNpna7rqOE4klEsuyPOUkSTAMAycvnCJhykopjOPIyc6hSEzTBN/3N5kmMTm1Ypqm51Y0D8jVJmGJ5pUcHQwhxHep73tObIT4eDlxHENrzVU3QizL8pREWHu89Du+4fdF4A5Ux0aUEmH32QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Documentos'" sap:VirtualizedContainerService.HintSize="421,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://web.whatsapp.com/" DesignTimeRectangle="1387, 171, 140, 50" ElementType="Button" FriendlyName="'Documentos'" FullSelectorArgument="&lt;webctrl aaname='Documentos' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Documentos' tag='BUTTON' type='' check:text='Documentos' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAA2CAYAAAAoAxBLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKUSURBVHhe7dYxbhRBEIVhn4ejcBIH3IITcAEy34CAzDGEOCJAIgIJac+w6AVPKte+mSm86jXBH3zanlc1PTM9vWvf3T0+nIEXiyEwFUNgKobAVAyBqRgCUzEEpmIITMUQmIohMBVDYCqGwFQMgakYAlMxBKZiCEzFEJiKITAVQ2AqhsBUDIGpGAJTMQSmYghMxXChz6dfF958+TTq3er7+PvHsz7nW+fUXOP3P58ueuztt8eL/q7WdC/1fHNfv1er5/VafwYd1/re/S8Xw4X6gvgF6dOZF+goE2X3378+63NPv5bVXGO9vNQnqtX61pyuSb2fWuvn9UxjZXvP7eN6XrrezcRwobSQWpz6DdQ3Ki3KtM/StXquseZJ32LNLb0/zVlr+qyboNb2sslzq7+uwauL4UJbL6DmWz2upXHyL9dKvamW+sw1vXCNU20vO5rbY22g/2YTxXChrUVyLnWxummfHF2rjvXNr79C9bj3dz5HY/fp/PqSay1l+qxzdf18/zK++kaK4UJpIZ3XcepxLY2TvWs5v2bc9Zperv8kpfN6djR3yr2RUu0mYrhQWqT6bZe68FX/H0jj/r9Gleq6dl3wej++j34/tSfdv6Was72aj6fP3R2tw1IxXKgvmhasZ17wuiga9z5ntU91H3tu10QbY2tz+DhlPu61KtV8j6nWM42V1efx+e7Tcd9kae6bieFCethq65vlxawmfX0+bZZar5tHlNXF778+vafOZX7hGqcX6XvotZTp2PNarYuesdbrhru5GAJTMQSmYghMxRCYiiEwFUNgKobAVAyBqRgCUzEEpmIITMUQmIohMBVDYCqGwNS7Px/OEovAETYQrsIGwlXYQLjK6XQ6Ay/FBsIVTue/WMtBcZbsMp8AAAAASUVORK5CYII=" InformativeScreenshot="6dc26d57701e0f588b1d55e6ca99bb31.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='WhatsApp' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1247, 171, 140, 50" ElementType="Button" FriendlyName="'Mídia'" FullSelectorArgument="&lt;webctrl aaname='Mídia' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Mídia' tag='BUTTON' type='' check:text='Mídia' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAA2CAYAAAAoAxBLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVHhe7d1NSsRAEIZhz+WBXHkYPYRXEFy5FlT8YXQcf1FREMIsBLeRTyimbEsz0wUuOm/BQ5KuzLj56E4YEte6rutns1m/tr8DrG4+nxMg1Ls8O+xfH67iJjBE4SFAqKbwvNxdxk1giAL0fDuJm8AQAoQULV8ECNVuJsf9/fQ0bgJDHq8n/d3FSdwEhnAbjxQChBQChBQChBQChBQChBQChBQChBQChBQChBQChBQC9N1u9/Il6iFAgBY2rg76radp2MMvCNDC+tFeOI4/tBwg1V/LkWYclQVHZb2oyoCp/LGMbglsPUDXH++/zizq+b7Keir/OQubtv4c2xedb9/px5s2hhkomhF0rSOqZQIkCo8Ph8r37TuN7zWr9QApBLYd6qnKvh1H4yrfs9lMRjMLjSFAmg38LOSP7Rzbt3NUNu75cZWNl6GxMNlxs8YQoFX2tS3HPVW0Xy5b5XGzxhIgm3VsG52jisZN9Fm/H5X1mzWWANmxqhxbJkAKTzmm0ra8uDYa83dtTRpTgMoZpDxH5cd9RQFRaWszW9mP/l5z9GRqqwHCP9CDhQQI1fRU6sPsPG4CQxQgno1HNS1fvGAK1fRqF72hI2wCQxQg3s6Balq+CBCqKUBcRKOaljBecYdq3MYjReHhGgjVWv4xFf+AACGFACHFArT5tg0sjQAhhQAhhQAh5UeA9L9TgVURICR0/Ses0WMcPgDi6AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Saved.Values(Of System.Data.DataTable)(&quot;ExtracaoWhatsapp&quot;)]" DelayBefore="4" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='nome'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='arquivo'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='button' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="421,166" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0">
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="1247, 221, 419, 691" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div' parentid='app' tag='DIV' /&gt;" InformativeScreenshot="fb9e04ba6cd766adc193b6882216e982.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='WhatsApp' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" ColumnCount="0" DataTable="[Saved.Values(Of System.Data.DataTable)(&quot;ExtracaoWhatsapp&quot;)]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="421,647" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="linhas" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" ContinueOnError="False" DisplayName="Clique no botão de download" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://web.whatsapp.com/" DesignTimeRectangle="1572, 363, 34, 34" FriendlyName="'SPAN'" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' type='' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIySURBVFhH7Zehl8IwDIfv//coDA6FQqFwKAwOhcFN4SZ779t7uddl6Zps5R4C8T12XZv82qTJ7qfv+/SJfIVFWSzsfr+n0+mUDodD2u/3abPZDPDM2Pl8HuZYaz2EhL1er0HMdrsdnF+v1/R4PNLz+fybwzNjvGMOc1nD2txWDbewy+WSdrvd8Btxwtx8rTXHoioMw4TneDymruvMOR5Yiw1seTY2K4ywsFPCYr1fArawmYffoiiMXWHgdruZ79eATWzPnVxRGEfe8qQ02MaH9Q5MYSQp+WC9awk+ShdiIkxCuCbRveCjFNKJMGpO5FpTs6S4AnUrsil84VOPT4Rh2HOdBQznwgCx1lwLfOFTj4+E0UKo1vlYjbXCgEug29dIGEcavYkthOGT3pqPjYRxWlGjLYQxX0dqJIwjrVVkTQth+NQ1bSQMo/nfHloIA+07LIxbhBiBEOSiQEoOeHNW+14USuZpMSU8vbYaSm/yc2oecd4PgGryc2W9R18TF/kqqZaLaIFFHL1Oi4rWQjY4W2Ah2pLID9aIKKvvzYGvakuCaBMHERcVBfjSYYSJMAnPf332lCI0EQbs4uM+FAUSMprEEbCta1dOUZiE9OP+GQGSGgMtTw5b2Kx1mFlhwK44cvJhzYVgLTawNXdSQlWYQJKyU349hgXm5mutORZuYYATahVXXC4HfS4PC8+MSXIzlzoV2QyEhOXQQnBIC0OAVH6eGeOdbjMRFgt7N19hMfr0C4PeKGlKIf+1AAAAAElFTkSuQmCC" InformativeScreenshot="2505f2e3e2d4bbe1d642c02bd9c47784.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='(1) WhatsApp' /&gt;" SearchSteps="FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1350, 369, 191, 19" ElementType="Text" FriendlyName="'19_LaudoEngenharia_parc…'" FullSelectorArgument="&lt;webctrl aaname='19_LaudoEngenharia_parc1.pdf' tag='SPAN' /&gt;" FuzzySelectorArgument="[&quot;&lt;webctrl aaname='&quot; + linhas(&quot;arquivo&quot;).ToString + &quot;' tag='SPAN' type='' check:text='&quot; + linhas(&quot;arquivo&quot;).ToString + &quot;' /&gt;&quot;]" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMMAAAAXCAYAAAC20PuTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANGSURBVHhe7ZbbUVwxEEQdEtmQC6mQCZkQyX7iOtTtqnZ7JF3tLtjAfJzaK/W8JM1g/7pcLm9N01zeehia5qCHoWkOehia5qCHoWkOehia5qCHoWkOhsPw+Pg43H94eHjn6emptEmen5/fqbR78vr6Oqy7gvp1FvHy8lLafiacgbNU2i6ch3PdK95nsfOOZ6h6Q72s3vxrGHR5kBrO3tQ005mB+J+H4TPq2oUzfLXmvRez/ruF7A3ePXv3j2HAgSL0W2mrvYoehj1+6jCon8721Q7ZG1VPDv+blMVoYn0PVHzuO7Nh8L8EGSvzYZvT7L7kyGFgLT212TCoIT1+2rhW5Xad2rW/ir3SZ3eGr+vs6XflO8LjVH679WjffbQvqj1HusfIs7jm75O5qY/908OgPW8emom91YXiM2o636coFQxZA7oPA7ZZj/vz7fbYuq76HWnY+RrbWW7WHjt1YumezsSe6bM749vX4LFmviPw9xj4nY1Z1cN6dB7h8StWNZHD45LP60DLvFvDoH1BMH5vGYbE8/o3cGBdIjlTZ08HrnRAV73EGtXldrCK7XrVZJ5rFvuMnngt2JF/pCczTWDj9UCVR8zq4ftszmpfzGpiP/3zDque3B4Gp0paUSUWiuFIy9gcVMPAtx8O/MCVDuxhx/e1w3Amd54JlGsW+4zOOmNLS19wfeY7orLxu9upZ/QuSZXTqXTVtHofwC7f/qZhIJiac0aVGNQ0vufr1LD3Yah0HbjSwR/nnsOQuVN3ZrFXenUuX6ev6yvfEdhkTPIQb7ee1d2IVV27NWXeqievHgYlzIIqZsOQBXpeNPdj7cOHbeoeL+2x9fW1wwCr3Kk7q9gz/cyduS9IX/mOwCbv8dZ6/G78W2RdxGBPsWY1Sfe4aFln5t0aBoKxL1IfQVL3AxXmMWUnP12A634BqefDgOupEct10AVh64/It/vv5gbtr2Kf0RUz7yx9IfWR7whsOJ/80me3HpA9YFPpviYGe4rF96wm2YtqaPXWYjgMzR5ctg/qdyIb7X/gI2q62zD4FIpq4r8rnJeBqLSvQL4d6P34Tvt/zUfU1P8yXAmN4o3zlQdhRQ9D0/wwehia5qCHoWneubz9BoM77NFu/C1IAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Salvando arquivos" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" Text="[PathPDFS + &quot;\Downloads\&quot; + linhas(&quot;arquivo&quot;).ToString + &quot;[k(enter)]&quot;]">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="136, 370, 791, 17" ElementType="InputBox" FriendlyName="'19_LaudoEngenharia_parc1'" FullSelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAxsAAAAVCAYAAAAuPPMkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMPSURBVHhe7dxNTuMwFABgzsWB5gxzjB6DE7DsKSrNAokdG8SqK3aZOE6IndhNmzZTGH2f9CQS/6Uui/eSwEMDAACwAcUGAACwiWKx8fD7jxCrAwAAAsWGuHkAAECg2BA3DwAACE4XG0/H9ujY/EoSyXguetm/judn8dY8N5/NbldquzbOnTv0yz0/lfptGTfYh91H87LZXl4Zhd8RAAAIKsXGa7N7b384HNtEOUkku6R3OF5Kor9LsXHvJP07XMMWUfkdaQMAAIKF16hCojwmko/7z+xpxvQ4D8VGjP+12Bgi/x0JAQAAwV2KjV+HfqHg8Nafn/afHHdPVaKX/Ue1LRhflapdQ39+X3kl7Oy1Jk95ivP1bU/pnONap/bi+fDZngxr5J+jPKYUt1g7nOufYvTyV9FCf8UGAABzFxUb+fv5MQFdU2yMkfaZ9p+2jUluKHKaSlssBvK20XDt/fkhwc4+19JayTW24+LnX56vef9oHmdtaaRzxzGzgmVYtzimFJO1s72Z9qutfc73nH8eAAAILis22ojJdxDvfq8qNrqEe5AmuWn/5DgkyUPCXGqbXGO4Yx+Lhdo1XLPWRFdgnJjvZFsbl+5FdUwppvOke9PGOWsX9jeP0F+xAQDA3MXFRhpZ4jqLeaLbRZa8hrvmlSQ3PV4sAP5lsVHajxPzLa21Zi+KY0oxnSc+pej25ty1q595iNA/bwcAgGB9sRHuimdJ+TSmiW4f6bgukR36JInw0O+rLcw1ti2/RjVcc+UaZufT4+W15k9zluartFX3Ys2YUoRxyfWme3P22vF78RoVAACXurDYiMlrVClCviLtG8WENSavnfdj85zeme8KjF73L1XLbaf/aDtNlGvXEM5P+61Zq3XVa1S1vVgzphRxXPxj7+irKDt77eHcaJxjaFNsAAAwt1BsiOxpwI+LUuGwfQAAQHCDYiO/6x391OR8Ht2/hz35uth3iNp3oNgAAOB+PNmYRfJ6UecnF06KDQAA7qdYbAAAAFxLsQEAAGxCsQEAAGxCsQEAAGygaf4CQKUr/Hj0YJAAAAAASUVORK5CYII=" InformativeScreenshot="0f0d8f4d450892771370e9ae4bd68a0e.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='#32770' title='Salvar arquivo como' /&gt;" SearchSteps="Selector, FuzzySelector, Image" WaitForReadyArgument="Complete" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1936, 939" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="e8a481d6324e418d21725d76c4312116.png" Selector="&lt;html app='firefox.exe' title='Nova aba'/&gt;" Url="[UrlWhatsapp]" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </ueab:SequenceX>
+</Activity>
